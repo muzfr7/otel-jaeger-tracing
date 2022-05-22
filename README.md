@@ -11,6 +11,5 @@
 ### Test
 * API -> http://localhost:8080/api/v1/users
 * Jaeger UI -> http://localhost:16686
-
-### MySQL connection
+* MySQL connection
 ![Alt text](docs/mysql-connection.png?raw=true "MySQL Connection")
