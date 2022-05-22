@@ -11,7 +11,7 @@ run:
 # example: make m1-up
 # example: make m1-down
 m1-up:
-	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-m1.yaml up --build
+	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-m1.yaml up -d --build
 m1-down:
 	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-m1.yaml down
 
@@ -19,6 +19,6 @@ m1-down:
 # example: make intel-up
 # example: make intel-down
 intel-up:
-	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-intel.yaml up --build
+	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-intel.yaml up -d --build
 intel-down:
 	$(COMPOSE) -f $(DOCKER_DIR)/docker-compose-intel.yaml down
