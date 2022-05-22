@@ -1,15 +1,16 @@
 version: "3.4"
 services:
   mysql:
-    image: mysql:5.7.24
+    image: mysql:5.7
+    platform: linux/amd64
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: client
-      MYSQL_USER: user
-      MYSQL_PASSWORD: pass
+      MYSQL_DATABASE: otel-jaeger-tracing
+      MYSQL_USER: otel-jaeger-tracing
+      MYSQL_PASSWORD: secret
     volumes:
-      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./resources/mysql/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
@@ -17,6 +18,7 @@ services:
       - 3306:3306
   jaeger:
     image: jaegertracing/all-in-one:1.22.0
+    platform: linux/amd64
     container_name: jaeger
     ports:
       - 14268:14268 # jaeger-collector HTTP server (tracer provider)

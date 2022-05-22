@@ -1,2 +1,3 @@
-# OpenTelemetry & Jaeger Tracing in Golang
+# OpenTelemetry & Jaeger Tracing
 
+Work in progress..

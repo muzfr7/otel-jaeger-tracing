@@ -30,7 +30,7 @@ func main() {
 	defer prv.Close(ctx)
 
 	// Bootstrap database.
-	dtb, err := sql.Open("mysql", "user:pass@tcp(:3306)/client")
+	dtb, err := sql.Open("mysql", "otel-jaeger-tracing:secret@tcp(:3306)/otel-jaeger-tracing")
 	if err != nil {
 		log.Fatalln(err)
 	}
