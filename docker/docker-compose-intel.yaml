@@ -9,7 +9,7 @@ services:
       MYSQL_USER: otel-jaeger-tracing
       MYSQL_PASSWORD: secret
     volumes:
-      - ./resources/mysql/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ../resources/mysql/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
