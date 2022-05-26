@@ -13,3 +13,6 @@
 * Jaeger UI -> http://localhost:16686
 * MySQL connection
 * <img src="docs/mysql-connection.png" width="50%">
+
+## Contribution
+> To be added..
